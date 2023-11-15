@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="accountActivation.aspx" />
+    <Content Include="db-script\db.sql" />
     <Content Include="Images\32318401_7922058.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
