@@ -8,23 +8,23 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Security.Cryptography;
+using System.Net;
+using System.Net.Mail;
 
 namespace OnlineShop
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Recover_Password : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        protected void login_Click(object sender, EventArgs e)
+        protected void forgotPW_Click(object sender, EventArgs e)
         {
             SqlConnection myConn = new SqlConnection(ConfigurationManager.ConnectionStrings["OnlineShopConnectionString"].ConnectionString);
             SqlCommand sqlCommand = new SqlCommand();
 
             sqlCommand.Parameters.AddWithValue("@email", email.Text);
-            sqlCommand.Parameters.AddWithValue("@password", EncryptString(password.Text));
 
             SqlParameter value = new SqlParameter();
             value.ParameterName = "@return";
@@ -33,7 +33,7 @@ namespace OnlineShop
             sqlCommand.Parameters.Add(value);
 
             sqlCommand.CommandType = CommandType.StoredProcedure;
-            sqlCommand.CommandText = "login";
+            sqlCommand.CommandText = "emailToChangePW";
 
             sqlCommand.Connection = myConn;
             myConn.Open();
@@ -41,28 +41,35 @@ namespace OnlineShop
 
             int output = Convert.ToInt32(sqlCommand.Parameters["@return"].Value);
 
-            myConn.Close();
-
             if(output == 1)
             {
-                Session["logged"] = true;
-                Session["email"] = email.Text;
-                lbl_message.Text = $"Welcome {email.Text}";
-                //Response.Redirect("Main.aspx");
-            }
-            else if(output == 2)
-            {
-                lbl_message.Text = "Account is not currently active";
+                String User = ConfigurationManager.AppSettings["SMTP_USER"];
+                String Pass = ConfigurationManager.AppSettings["SMTP_PASS"];
+
+                MailMessage mail = new MailMessage();
+                SmtpClient servidor = new SmtpClient();
+
+                mail.From = new MailAddress(User);
+                mail.To.Add(new MailAddress(email.Text));
+                mail.Subject = "Forgot Password - ATEC SHOP";
+                mail.IsBodyHtml = true;
+                mail.Body = "To change your password click <a href='https://localhost:44331/NewPassword.aspx?email=" + EncryptString(email.Text) + "'>here</a><br><br>If this was not you please ignore the email";
+
+                servidor.Host = ConfigurationManager.AppSettings["SMTP_HOST"];
+                servidor.Port = int.Parse(ConfigurationManager.AppSettings["SMTP_PORT"]);
+
+                servidor.Credentials = new NetworkCredential(User, Pass);
+                servidor.EnableSsl = true;
+
+                servidor.Send(mail);
+                lbl_message.Text = "An email has been sent!";
+                Session["newPasswordRequest"] = true;
             }
             else
             {
-                lbl_message.Text = "Wrong email and/or password";
+                lbl_message.Text = "That email does not exist!";
             }
-        }
 
-        protected void register_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Register.aspx");
         }
         public static string EncryptString(string Message)
         {

@@ -11,7 +11,7 @@ namespace OnlineShop
 {
 
 
-    public partial class Login
+    public partial class Recover_Password
     {
 
         /// <summary>
@@ -33,39 +33,12 @@ namespace OnlineShop
         protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
-        /// Controle password.
+        /// Controle forgotPW.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
-
-        /// <summary>
-        /// Controle forgot_pw.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button forgot_pw;
-
-        /// <summary>
-        /// Controle login.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button login;
-
-        /// <summary>
-        /// Controle register.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button register;
+        protected global::System.Web.UI.WebControls.Button forgotPW;
     }
 }

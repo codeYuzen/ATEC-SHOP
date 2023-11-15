@@ -11,7 +11,7 @@ namespace OnlineShop
 {
 
 
-    public partial class Login
+    public partial class NewPassword
     {
 
         /// <summary>
@@ -24,48 +24,48 @@ namespace OnlineShop
         protected global::System.Web.UI.WebControls.Label lbl_message;
 
         /// <summary>
-        /// Controle email.
+        /// Controle newPW.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox newPW;
 
         /// <summary>
-        /// Controle password.
+        /// Controle CompareValidator1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
 
         /// <summary>
-        /// Controle forgot_pw.
+        /// Controle RequiredFieldValidator1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button forgot_pw;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
-        /// Controle login.
+        /// Controle confirmPW.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button login;
+        protected global::System.Web.UI.WebControls.TextBox confirmPW;
 
         /// <summary>
-        /// Controle register.
+        /// Controle changePW.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button register;
+        protected global::System.Web.UI.WebControls.Button changePW;
     }
 }
