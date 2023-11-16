@@ -17,7 +17,8 @@ namespace OnlineShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["logged"] != null)
+                Response.Redirect("index.aspx");
         }
 
         protected void resetAll_Click(object sender, EventArgs e)
@@ -151,6 +152,11 @@ namespace OnlineShop
             address.Text = "";
             postalCode.Text = "";
             region.Text = "";
+        }
+
+        protected void loginPage_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

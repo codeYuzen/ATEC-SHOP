@@ -15,7 +15,8 @@ namespace OnlineShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["logged"] != null)
+                Response.Redirect("index.aspx");
         }
 
         protected void login_Click(object sender, EventArgs e)
@@ -32,6 +33,12 @@ namespace OnlineShop
             value.SqlDbType = SqlDbType.Int;
             sqlCommand.Parameters.Add(value);
 
+            SqlParameter accType = new SqlParameter();
+            accType.ParameterName = "@accType";
+            accType.Direction = ParameterDirection.Output; 
+            accType.SqlDbType = SqlDbType.Int;
+            sqlCommand.Parameters.Add(accType);
+            
             sqlCommand.CommandType = CommandType.StoredProcedure;
             sqlCommand.CommandText = "login";
 
@@ -40,6 +47,7 @@ namespace OnlineShop
             sqlCommand.ExecuteNonQuery();
 
             int output = Convert.ToInt32(sqlCommand.Parameters["@return"].Value);
+            int accTypeOutput = Convert.ToInt32(sqlCommand.Parameters["@accType"].Value);
 
             myConn.Close();
 
@@ -47,8 +55,8 @@ namespace OnlineShop
             {
                 Session["logged"] = true;
                 Session["email"] = email.Text;
-                lbl_message.Text = $"Welcome {email.Text}";
-                //Response.Redirect("Main.aspx");
+                Session["accountType"] = accTypeOutput;
+                Response.Redirect("index.aspx");
             }
             else if(output == 2)
             {

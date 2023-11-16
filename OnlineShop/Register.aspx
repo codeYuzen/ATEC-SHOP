@@ -79,6 +79,7 @@
                 <div class="d-flex justify-content-end pt-3">
                   <asp:Button ID="resetAll" runat="server" Text="Reset" class="btn btn-light btn-lg" OnClick="resetAll_Click"/>
                   <asp:Button ID="registerUser" runat="server" Text="Register" class="btn btn-warning btn-lg ms-2" OnClick="registerUser_Click"/>
+                  <asp:Button ID="loginPage" runat="server" Text="Login instead" class="btn btn-warning btn-lg ms-2" OnClick="loginPage_Click" CausesValidation="false"/>
                 </div>
 
               </div>
