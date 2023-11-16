@@ -11,115 +11,97 @@ namespace OnlineShop
 {
 
 
-    public partial class Main
+    public partial class products
     {
 
         /// <summary>
-        /// head control.
+        /// tb_serial control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox tb_serial;
 
         /// <summary>
-        /// form1 control.
+        /// tb_price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox tb_price;
 
         /// <summary>
-        /// lbl_index control.
+        /// ddl_category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_index;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_category;
 
         /// <summary>
-        /// lbl_contact control.
+        /// ddl_manufacturer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_contact;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_manufacturer;
 
         /// <summary>
-        /// lbl_about control.
+        /// tb_model control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_about;
+        protected global::System.Web.UI.WebControls.TextBox tb_model;
 
         /// <summary>
-        /// lbl_shopcart control.
+        /// ddl_color control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_shopcart;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_color;
 
         /// <summary>
-        /// lbl_admin control.
+        /// tb_photo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_admin;
+        protected global::System.Web.UI.WebControls.TextBox tb_photo;
 
         /// <summary>
-        /// lbl_login control.
+        /// tb_stock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_login;
+        protected global::System.Web.UI.WebControls.TextBox tb_stock;
 
         /// <summary>
-        /// lbl_users control.
+        /// tb_details control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_users;
+        protected global::System.Web.UI.WebControls.TextBox tb_details;
 
         /// <summary>
-        /// lbl_products control.
+        /// btn_submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_products;
-
-        /// <summary>
-        /// lbl_deliveries control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_deliveries;
-
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btn_submit;
     }
 }

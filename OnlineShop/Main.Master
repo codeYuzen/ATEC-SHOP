@@ -57,13 +57,13 @@
                                         <asp:Label ID="lbl_index" class="navLink" runat="server" Text="Home"></asp:Label>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" hidden>
                                     <a class="nav-link" href="contact.aspx">
                                         <i class="fa-solid fa-phone"></i>
                                         <asp:Label ID="lbl_contact" class="navLink" runat="server" Text="Contact Us"></asp:Label>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" hidden>
                                     <a class="nav-link" href="about.aspx">
                                         <i class="fa-sharp fa-solid fa-users"></i>
                                         <asp:Label ID="lbl_about" class="navLink" runat="server" Text="About Us"></asp:Label>
@@ -85,6 +85,24 @@
                                     <a class="nav-link" href="login.aspx">
                                         <i class="fa-solid fa-user"></i>
                                         <asp:Label ID="lbl_login" class="navLink" runat="server" Text="Login"></asp:Label>
+                                    </a>
+                                </li>
+                                <li class="nav-item" hidden>
+                                    <a class="nav-link" href="users.aspx">
+                                        <i class="fa-solid fa-user"></i>
+                                        <asp:Label ID="lbl_users" class="navLink" runat="server" Text="Users"></asp:Label>
+                                    </a>
+                                </li>
+                                <li class="nav-item" hidden>
+                                    <a class="nav-link" href="products.aspx">
+                                        <i class="fa-solid fa-user"></i>
+                                        <asp:Label ID="lbl_products" class="navLink" runat="server" Text="Products"></asp:Label>
+                                    </a>
+                                </li>
+                                <li class="nav-item" hidden>
+                                    <a class="nav-link" href="deliveries.aspx">
+                                        <i class="fa-solid fa-user"></i>
+                                        <asp:Label ID="lbl_deliveries" class="navLink" runat="server" Text="Deliveries"></asp:Label>
                                     </a>
                                 </li>
                             </ul>

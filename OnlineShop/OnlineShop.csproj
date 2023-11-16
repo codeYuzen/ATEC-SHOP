@@ -80,6 +80,7 @@
     <Content Include="css\style.css" />
     <Content Include="css\product.css" />
     <Content Include="db-script\db.sql" />
+    <Content Include="deliveries.aspx" />
     <Content Include="images\background.jpg" />
     <Content Include="images\bruno.jpg" />
     <Content Include="images\joao.jpg" />
@@ -93,8 +94,10 @@
     <Content Include="Login.aspx" />
     <Content Include="NewPassword.aspx" />
     <Content Include="product.aspx" />
+    <Content Include="products.aspx" />
     <Content Include="Recover-Password.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="users.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +128,13 @@
     </Compile>
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deliveries.aspx.cs">
+      <DependentUpon>deliveries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deliveries.aspx.designer.cs">
+      <DependentUpon>deliveries.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -161,6 +171,13 @@
     <Compile Include="product.aspx.designer.cs">
       <DependentUpon>product.aspx</DependentUpon>
     </Compile>
+    <Compile Include="products.aspx.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="products.aspx.designer.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recover-Password.aspx.cs">
       <DependentUpon>Recover-Password.aspx</DependentUpon>
@@ -175,6 +192,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
