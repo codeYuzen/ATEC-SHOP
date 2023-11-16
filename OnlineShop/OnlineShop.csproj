@@ -75,6 +75,10 @@
     <Content Include="css\admin.css" />
     <Content Include="css\contacts.css" />
     <Content Include="css\index.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\mdb.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\product.css" />
     <Content Include="db-script\db.sql" />
     <Content Include="images\background.jpg" />
     <Content Include="images\bruno.jpg" />
@@ -85,8 +89,10 @@
     <Content Include="index.aspx" />
     <Content Include="js\admin.js" />
     <Content Include="js\index.js" />
+    <Content Include="js\mdb.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="NewPassword.aspx" />
+    <Content Include="product.aspx" />
     <Content Include="Recover-Password.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
@@ -148,6 +154,13 @@
     <Compile Include="NewPassword.aspx.designer.cs">
       <DependentUpon>NewPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="product.aspx.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product.aspx.designer.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recover-Password.aspx.cs">
       <DependentUpon>Recover-Password.aspx</DependentUpon>
@@ -166,6 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />
+    <Content Include="images\roupa.avif" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

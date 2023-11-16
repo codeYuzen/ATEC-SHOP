@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="OnlineShop.contact" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <!-- local css -->
+    <link rel="stylesheet" href="css/contacts.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container bootstrap snippets bootdeys p-4 mt-5">

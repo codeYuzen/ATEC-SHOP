@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="OnlineShop.admin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    	<!-- local css -->
+    <link rel="stylesheet" href="css/admin.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="inputs" class="container-fluid">
@@ -137,8 +139,8 @@
                     <!-- <button type="button" onclick="clickAddComponent()" class="btn btn-primary" id="submit">
                         <i class="fa-solid fa-circle-plus"></i>
                     </button> -->
-                    <asp:Button ID="btn_submit" runat="server" class="btn btn-primary" Text="Submit" />
-                    <!-- <i class="fa-solid fa-circle-plus"></i> -->
+                    <asp:Button ID="btn_submit" runat="server" class="btn btn-primary" Text="SUBMIT"></asp:Button>
+                    <i class="fa-solid fa-circle-plus"></i>
                 </div>
             </div>
         </div>
