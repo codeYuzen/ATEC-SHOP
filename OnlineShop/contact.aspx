@@ -65,34 +65,36 @@
 
                     <div class="form-group">
                         <label for="name2">Name</label>
-                        <input class="form-control" id="name2" name="name"
+                        <!-- <input class="form-control" id="name2" name="name"
                             onblur="if(this.value == '') this.value='Name'"
-                            onfocus="if(this.value == 'Name') this.value=''" type="text" value="Name">
+                            onfocus="if(this.value == 'Name') this.value=''" type="text" value="Name"> -->
+                        <asp:TextBox ID="tb_name" class="form-control" runat="server"></asp:TextBox>
                         <div class="error" id="err-name" style="display: none;">Please enter name</div>
                     </div>
 
                     <div class="form-group">
                         <label for="subject2">Subject</label>
-                        <input class="form-control" id="subject2" name="subject" type="text"
+                        <!-- <input class="form-control" id="subject2" name="subject" type="text"
                             onfocus="if(this.value == 'Subject') this.value='';"
-                            onblur="if(this.value == '') this.value='Subject';" value="Subject">
+                            onblur="if(this.value == '') this.value='Subject';" value="Subject"> -->
+                        <asp:TextBox ID="tb_subject" class="form-control" runat="server"></asp:TextBox>
                         <div class="error" id="err-subjectvld" style="display: none;">Subject is not a valid format
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="message2">Message</label>
-                        <textarea class="form-control" id="message2" name="message" rows="5"
+                        <!-- <textarea class="form-control" id="message2" name="message" rows="5"
                             onblur="if(this.value == '') this.value='Message'"
-                            onfocus="if(this.value == 'Message') this.value=''">Message</textarea>
-
+                            onfocus="if(this.value == 'Message') this.value=''">Message</textarea> -->
+                        <asp:TextBox ID="tb_message" runat="server" Rows="5" TextMode="MultiLine"></asp:TextBox>
                         <div class="error" id="err-message" style="display: none;">Please enter message</div>
                     </div>
 
                     <div class="row">
                         <div class="col-xs-12">
-                            <button type="submit"
-                                class="btn btn-primary btn-shadow btn-rounded w-md mt-4">Submit</button>
+                            <!-- <button type="submit" class="btn btn-primary btn-shadow btn-rounded w-md mt-4">Submit</button> -->
+                            <asp:Button ID="btn_submit" class="btn btn-primary btn-shadow btn-rounded w-md mt-4" runat="server" Text="Button" />
                         </div>
                     </div>
                 </div>

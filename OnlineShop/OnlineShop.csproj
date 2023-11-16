@@ -83,6 +83,9 @@
     <Content Include="images\onur.jpg" />
     <Content Include="images\rodrigo.jpg" />
     <Content Include="index.aspx" />
+    <Content Include="js\admin.js" />
+    <Content Include="js\index.js" />
+    <Content Include="Login.aspx" />
     <Content Include="NewPassword.aspx" />
     <Content Include="Recover-Password.aspx" />
     <Content Include="Register.aspx" />
@@ -124,12 +127,12 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Log.Master.cs">
-      <DependentUpon>Log.Master</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Log.Master.designer.cs">
-      <DependentUpon>Log.Master</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -163,7 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />
-    <Content Include="Log.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
