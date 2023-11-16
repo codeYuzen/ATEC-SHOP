@@ -1,0 +1,40 @@
+body {
+  background-image: url(../images/background.jpg);
+}
+
+#navbar {
+  background-color: rgb(34, 32, 32);
+}
+
+.nav-item>.nav-link,
+.nav-item>.nav-link:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-item {
+  font-size: 0.9em;
+}
+
+.container {
+  color: white;
+}
+
+body a{
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .nav-item {
+    margin-left: 3%;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  #navbarNav h1 {
+    display: inline;
+    margin-top: 3%;
+    font-weight: bold;
+    color: white;
+  }
+}
