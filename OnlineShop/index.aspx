@@ -51,6 +51,7 @@
     <!-- carousel end -->
 
     <!-- <div id="product_rows" class="container" style="position: relative">All Products</div> -->
+    <asp:DropDownList ID="ddl_sort" class="form-control" runat="server"></asp:DropDownList>
 
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog">
