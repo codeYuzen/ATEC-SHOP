@@ -2,5 +2,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3 style="text-align: center">Your account is now active</h3>
+    <h1 style="text-align: center; color: red">Your account is now active</h1>
 </asp:Content>

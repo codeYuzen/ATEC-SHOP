@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="h-100 bg-transparent">
         <div class="container py-5 h-100">
-            <h1 style="text-align: center">
+            <h1 style="text-align: center; color: red">
                 <asp:Label ID="lbl_message" runat="server" Text=""></asp:Label></h1>
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col">

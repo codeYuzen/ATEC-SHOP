@@ -10,7 +10,7 @@
             <h1 class="text-light d-flex justify-content-center mb-5">Admin Control Panel</h1>
         </div>
     </div>
-    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound">
+    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource2" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound">
         <HeaderTemplate>
             <table id="users" border="1" width="1500" bgcolor="white">
                 <tr style="background-color: white">
@@ -102,5 +102,6 @@
             </table>
         </FooterTemplate>
     </asp:Repeater>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineShopConnectionString %>" SelectCommand="SELECT [userID], [name], [email], [address], [city], [zipcode], [nif], [User_active], [User_Type] FROM [Users]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineShopConnectionString %>" SelectCommand="SELECT * FROM [Users]"></asp:SqlDataSource>
 </asp:Content>

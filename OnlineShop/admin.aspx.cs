@@ -14,7 +14,10 @@ namespace OnlineShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["accountType"] == null || Session["accountType"].Equals(0))
+            {
+                Response.Redirect("index.aspx");
+            }
         }
 
         protected void btn_saveAll_Click(object sender, ImageClickEventArgs e)
@@ -52,7 +55,7 @@ namespace OnlineShop
                 query += "name = '" + ((TextBox)e.Item.FindControl("tb_name")).Text + "', ";
                 query += "address = '" + ((TextBox)e.Item.FindControl("tb_address")).Text + "', ";
                 query += "city = '" + ((TextBox)e.Item.FindControl("tb_city")).Text + "', ";
-                query += "zipcode = '" + ((TextBox)e.Item.FindControl("tb_zif")).Text + "', ";
+                query += "zipcode = '" + ((TextBox)e.Item.FindControl("tb_zipcode")).Text + "', ";
                 query += "nif = '" + ((TextBox)e.Item.FindControl("tb_nif")).Text + "', ";
                 query += "User_active = '" + ((TextBox)e.Item.FindControl("tb_active")).Text + "', ";
                 query += "User_Type = '" + ((TextBox)e.Item.FindControl("tb_type")).Text + "' ";
