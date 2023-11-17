@@ -12,14 +12,12 @@
                 <div class="form-outline">
                     <label class="form-label text-light">Serial</label>
                     <asp:TextBox ID="tb_serial" placeholder="Serial" Style="text-transform: uppercase" class="form-control" runat="server"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Serial is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Price</label>
                     <asp:TextBox ID="tb_price" placeholder="Price" class="form-control" runat="server" TextMode="Number"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Price is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
@@ -36,7 +34,6 @@
                         <asp:ListItem>Processors</asp:ListItem>
                         <asp:ListItem>Storage</asp:ListItem>
                     </asp:DropDownList>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Category is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
@@ -75,14 +72,12 @@
                         <asp:ListItem>XFX</asp:ListItem>
                         <asp:ListItem>Zotac</asp:ListItem>
                     </asp:DropDownList>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Manufacturer is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Model </label>
                     <asp:TextBox ID="tb_model" placeholder="Model" class="form-control" runat="server"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Model is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
@@ -105,7 +100,6 @@
                         <asp:ListItem>White</asp:ListItem>
                         <asp:ListItem></asp:ListItem>
                     </asp:DropDownList>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Color is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
@@ -119,7 +113,6 @@
                 <div class="form-outline">
                     <label class="form-label text-light">Stock</label>
                     <asp:TextBox ID="tb_stock" placeholder="Stock" class="form-control" runat="server" TextMode="Number"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Stock is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">

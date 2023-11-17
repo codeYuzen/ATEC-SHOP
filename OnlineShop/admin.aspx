@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="OnlineShop.admin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    	<!-- local css -->
+    <!-- local css -->
     <link rel="stylesheet" href="css/admin.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -15,20 +15,18 @@
             <table id="users" border="1" width="1500" bgcolor="white">
                 <tr style="background-color: white">
                     <td><b>ID</b></td>
+                    <td><b>Name</b></td>
                     <td><b>Email</b></td>
-                    <td><b>Password</b></td>
-                    <td><b>First Name</b></td>
-                    <td><b>Last Name</b></td>
                     <td><b>Address</b></td>
-                    <td><b>Postal Code</b></td>
-                    <td><b>Region</b></td>
+                    <td><b>City</b></td>
+                    <td><b>Zip Code</b></td>
+                    <td><b>NIF</b></td>
                     <td><b>Active</b></td>
                     <td><b>Type</b></td>
                     <td>
-                        <asp:ImageButton ID="btn_saveAll" runat="server" ImageUrl="~/images/saveAll.jpg" OnClick="btn_saveAll_Click"/>
+                        <asp:ImageButton ID="btn_saveAll" runat="server" ImageUrl="~/images/saveAll.jpg" OnClick="btn_saveAll_Click" />
                     </td>
                 </tr>
-           
         </HeaderTemplate>
         <ItemTemplate>
             <tr>
@@ -36,25 +34,22 @@
                     <asp:Label ID="lbl_id" runat="server" Text="Label"></asp:Label>
                 </td>
                 <td>
+                    <asp:TextBox ID="tb_name" runat="server"></asp:TextBox>
+                </td>
+                <td>
                     <asp:TextBox ID="tb_email" runat="server"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox ID="tb_password" runat="server"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox ID="tb_firstName" runat="server"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox ID="tb_lastName" runat="server"></asp:TextBox>
                 </td>
                 <td>
                     <asp:TextBox ID="tb_address" runat="server"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tb_postalCode" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tb_city" runat="server"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tb_region" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tb_zipcode" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_nif" runat="server"></asp:TextBox>
                 </td>
                 <td>
                     <asp:TextBox ID="tb_active" runat="server"></asp:TextBox>
@@ -63,8 +58,8 @@
                     <asp:TextBox ID="tb_type" runat="server"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:ImageButton ID="btn_save" runat="server" ImageUrl="~/images/save.png" CommandName="btn_save"/>
-                    <asp:ImageButton ID="btn_delete" runat="server" ImageUrl="~/images/delete.jpg" CommandName="btn_delete"/>
+                    <asp:ImageButton ID="btn_save" runat="server" ImageUrl="~/images/save.png" CommandName="btn_save" />
+                    <asp:ImageButton ID="btn_delete" runat="server" ImageUrl="~/images/delete.jpg" CommandName="btn_delete" />
                 </td>
             </tr>
         </ItemTemplate>
@@ -74,25 +69,22 @@
                     <asp:Label ID="lbl_id" runat="server" Text="Label"></asp:Label>
                 </td>
                 <td>
+                    <asp:TextBox ID="tb_name" runat="server"></asp:TextBox>
+                </td>
+                <td>
                     <asp:TextBox ID="tb_email" runat="server"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox ID="tb_password" runat="server"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox ID="tb_firstName" runat="server"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:TextBox ID="tb_lastName" runat="server"></asp:TextBox>
                 </td>
                 <td>
                     <asp:TextBox ID="tb_address" runat="server"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tb_postalCode" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tb_city" runat="server"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:TextBox ID="tb_region" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tb_zipcode" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_nif" runat="server"></asp:TextBox>
                 </td>
                 <td>
                     <asp:TextBox ID="tb_active" runat="server"></asp:TextBox>
@@ -101,13 +93,13 @@
                     <asp:TextBox ID="tb_type" runat="server"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:ImageButton ID="btn_save" runat="server" ImageUrl="~/images/save.png" CommandName="btn_save"/>
-                    <asp:ImageButton ID="btn_delete" runat="server" ImageUrl="~/images/delete.jpg" CommandName="btn_delete"/>
+                    <asp:ImageButton ID="btn_save" runat="server" ImageUrl="~/images/save.png" CommandName="btn_save" />
+                    <asp:ImageButton ID="btn_delete" runat="server" ImageUrl="~/images/delete.jpg" CommandName="btn_delete" />
                 </td>
             </tr>
         </AlternatingItemTemplate>
         <FooterTemplate>
-             </table>
+            </table>
         </FooterTemplate>
     </asp:Repeater>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineShopConnectionString %>" SelectCommand="SELECT * FROM [Users]"></asp:SqlDataSource>
