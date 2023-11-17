@@ -82,11 +82,14 @@
     <Content Include="db-script\db.sql" />
     <Content Include="images\background.jpg" />
     <Content Include="images\bruno.jpg" />
+    <Content Include="images\delete.jpg" />
     <Content Include="images\joao.jpg" />
     <Content Include="images\logo.jpg" />
     <Content Include="images\onur.jpg" />
     <Content Include="images\productNotFound.jpg" />
     <Content Include="images\rodrigo.jpg" />
+    <Content Include="images\save.png" />
+    <Content Include="images\saveAll.jpg" />
     <Content Include="index.aspx" />
     <Content Include="js\mdb.min.js" />
     <Content Include="Login.aspx" />
