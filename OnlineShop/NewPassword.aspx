@@ -1,11 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="NewPassword.aspx.cs" Inherits="OnlineShop.NewPassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <!--head links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="h-100 bg-transparent">
@@ -25,10 +19,10 @@
                 <h3 class="mb-5 text-uppercase">Change Password</h3>
 
                 <div class="form-outline mb-3">
-                  <asp:TextBox type="password" ID="newPW" runat="server" class="form-control form-control-lg"></asp:TextBox>
-                  <label class="form-label" for="newPW">Password</label>
-                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="confirmPW" ControlToValidate="newPW" ErrorMessage="*" ForeColor="Red"></asp:CompareValidator>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="newPW" ErrorMessage="*" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                  <asp:TextBox type="password" ID="newPassword" runat="server" class="form-control form-control-lg"></asp:TextBox>
+                  <label class="form-label" for="newPassword">Password</label>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="confirmPW" ControlToValidate="newPassword" ErrorMessage="*" ForeColor="Red"></asp:CompareValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="newPassword" ErrorMessage="*" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="form-outline mb-3">

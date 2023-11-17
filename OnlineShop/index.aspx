@@ -1,59 +1,57 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="OnlineShop.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    	<!-- local css -->
-	<link rel="stylesheet" href="css/index.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- carousel beginning -->
-    <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1">
-                </button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2">
-                </button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3">
-                </button>
-            </div>
-            <!-- carousel items -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://storage-asset.msi.com/event/mb/2017/4k_video/images/b_11.jpg"
-                        style="height: 450px; object-fit: cover; object-position: center;" class="d-block w-100"
-                        alt="carousel1" />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://i.insider.com/6012fda01d2df20018b71640?width=1000&format=jpeg&auto=webp"
-                        style="height: 450px; object-fit: cover; object-position: center;" class="d-block w-100"
-                        alt="carousel2" />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://img.freepik.com/free-photo/high-angle-hard-drive-components-laptop_23-2149417053.jpg?w=1380&t=st=1688302595~exp=1688303195~hmac=e815ecb41f9c652ae5da4ce104700ec2724532c92de364aa0ba0c5d9ce307292"
-                        style="height: 450px; object-fit: cover; object-position: center;" class="d-block w-100"
-                        alt="carousel3" />
-                </div>
-            </div>
-            <!-- carousel controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <!-- local css -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <div id="product_rows" class="container" style="position: relative">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3 mb-3 mt-2">
+            <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" OnItemDataBound="Repeater1_ItemDataBound">
+                <ItemTemplate>
+                    <div class="col hp">
+                        <div class="card h-100 shadow-sm">
+                            <div class="clearfix">
+                                <span class="float-start badge rounded-pill text-black bg-warning">
+                                    <asp:Label ID="lbl_category" runat="server"></asp:Label>
+                                </span>
+                                <span class="float-end badge rounded-pill text-black bg-warning bg-warning">
+                                    <asp:Label ID="lbl_manufacturer" runat="server"></asp:Label>
+                                </span>
+                            </div>
+                            <img src="images/productNotFound.jpg" class="card-img-top" alt="product.title" style="width: 100%; height: 200px; object-position: center" />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <asp:Label ID="lbl_model" runat="server"></asp:Label>
+                                </h5>
+                                <div class="clearfix mb-2">
+                                    <span class="float-start" style="font-size: 10px">
+                                        <asp:Label ID="lbl_serial" runat="server"></asp:Label></span>
+                                    <span class="float-end badge rounded-pill text-black bg-warning bg-success">PRICE: <asp:Label ID="lbl_price" runat="server"></asp:Label> €
+                                    </span>
+                                </div>
+                                <div class="clearfix mb-1">
+                                    <span class="float-start">
+                                        Stock: <asp:Label ID="lbl_stock" runat="server"></asp:Label>
+                                    </span>
+                                    <span class="float-end">
+                                        Color: <asp:Label ID="lbl_color" runat="server"></asp:Label>
+                                    </span>
+                                </div>
+                                <div class="d-grid gap-2 my-4">
+                                    <button class="btn btn-warning bold-btn">
+                                        <i class="fas fa-shopping-cart me-2"></i>Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineShopConnectionString %>" SelectCommand="SELECT [serial], [price], [category], [manufacturer], [model], [color], [stock] FROM [Products]"></asp:SqlDataSource>
         </div>
     </div>
-    <!-- carousel end -->
-
-    <!-- <div id="product_rows" class="container" style="position: relative">All Products</div> -->
-    <asp:DropDownList ID="ddl_sort" class="form-control" runat="server"></asp:DropDownList>
 
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog">

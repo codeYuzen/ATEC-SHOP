@@ -87,6 +87,15 @@ namespace OnlineShop
         protected global::System.Web.UI.WebControls.Label lbl_login;
 
         /// <summary>
+        /// lbl_logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_logout;
+
+        /// <summary>
         /// lbl_users control.
         /// </summary>
         /// <remarks>
@@ -105,13 +114,13 @@ namespace OnlineShop
         protected global::System.Web.UI.WebControls.Label lbl_products;
 
         /// <summary>
-        /// lbl_deliveries control.
+        /// lbl_orders control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_deliveries;
+        protected global::System.Web.UI.WebControls.Label lbl_orders;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

@@ -69,13 +69,13 @@ namespace OnlineShop
         protected global::System.Web.UI.WebControls.DropDownList ddl_color;
 
         /// <summary>
-        /// tb_photo control.
+        /// tb_photoProduct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_photo;
+        protected global::System.Web.UI.WebControls.TextBox tb_photoProduct;
 
         /// <summary>
         /// tb_stock control.
@@ -87,13 +87,13 @@ namespace OnlineShop
         protected global::System.Web.UI.WebControls.TextBox tb_stock;
 
         /// <summary>
-        /// tb_details control.
+        /// tb_desc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_details;
+        protected global::System.Web.UI.WebControls.TextBox tb_desc;
 
         /// <summary>
         /// btn_submit control.
@@ -103,5 +103,23 @@ namespace OnlineShop
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_submit;
+
+        /// <summary>
+        /// Repeater1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

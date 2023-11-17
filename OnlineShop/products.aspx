@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="products.aspx.cs" Inherits="OnlineShop.products" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        	<!-- local css -->
+    <!-- local css -->
     <link rel="stylesheet" href="css/admin.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -10,138 +11,132 @@
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Serial</label>
-                    <!-- <input type="text" id="inputSerial" placeholder="Serial" style="text-transform: uppercase"
-                        oninput="this.value = this.value.toUpperCase()" class="form-control"> -->
-                    <asp:TextBox ID="tb_serial" placeholder="Serial" style="text-transform: uppercase" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tb_serial" placeholder="Serial" Style="text-transform: uppercase" class="form-control" runat="server"></asp:TextBox>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Serial is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Price</label>
-                     <!-- <input type="number" id="inputPrice" placeholder="Number" step="0.01" min="0" value="0"
-                        class="form-control"> -->
-                    <asp:TextBox ID="tb_price" placeholder="Number" class="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                    <asp:TextBox ID="tb_price" placeholder="Price" class="form-control" runat="server" TextMode="Number"></asp:TextBox>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Price is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Category </label>
-                    <!-- <select name="Category" id="inputCategory" class="form-control">
-                        <option value="Select Category" selected disabled hidden>Select Category</option>
-                        <option value="Cases">Cases</option>
-                        <option value="Coolers">Coolers</option>
-                        <option value="Graphics Cards">Graphics Cards</option>
-                        <option value="Memory">Memory</option>
-                        <option value="Motherboards">Motherboards</option>
-                        <option value="Power Supplies">Power Supplies</option>
-                        <option value="Processors">Processors</option>
-                        <option value="Storage">Storage</option>
-                    </select> -->
-                    <asp:DropDownList ID="ddl_category" class="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddl_category" placeholder="Category" class="form-control" runat="server" AppendDataBoundItems="false">
+                        <asp:ListItem Text="Select Category" Value="" />
+                        <asp:ListItem>Cases</asp:ListItem>
+                        <asp:ListItem>Coolers</asp:ListItem>
+                        <asp:ListItem>Graphic Cards</asp:ListItem>
+                        <asp:ListItem>Memory</asp:ListItem>
+                        <asp:ListItem>Motherboards</asp:ListItem>
+                        <asp:ListItem>Power Supplies</asp:ListItem>
+                        <asp:ListItem>Processors</asp:ListItem>
+                        <asp:ListItem>Storage</asp:ListItem>
+                    </asp:DropDownList>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Category is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Manufacturer </label>
-                    <!-- <select name="Manufacturer" id="inputManufacturer" class="form-control">
-                        <option value="Select Manufacturer" selected disabled hidden>Select Manufacturer</option>
-                        <option value="Acer">Acer</option>
-                        <option value="AMD">AMD</option>
-                        <option value="ARCTIC">ARCTIC</option>
-                        <option value="ASRock">ASRock</option>
-                        <option value="Asus">Asus</option>
-                        <option value="be quiet!">be quiet!</option>
-                        <option value="Cooler Master">Cooler Master</option>
-                        <option value="Corsair">Corsair</option>
-                        <option value="Crucial">Crucial</option>
-                        <option value="Deepcool">Deepcool</option>
-                        <option value="EVGA">EVGA</option>
-                        <option value="Fractal Design">Fractal Design</option>
-                        <option value="G.Skill">G.Skill</option>
-                        <option value="Gigabyte">Gigabyte</option>
-                        <option value="Intel">Intel</option>
-                        <option value="Kingston">Kingston</option>
-                        <option value="KIOXIA">KIOXIA</option>
-                        <option value="Lian Li">Lian Li</option>
-                        <option value="Noctua">Noctua</option>
-                        <option value="NOX">NOX</option>
-                        <option value="MSI">MSI</option>
-                        <option value="NVIDIA">NVIDIA</option>
-                        <option value="NZXT">NZXT</option>
-                        <option value="Samsung">Samsung</option>
-                        <option value="Sapphire">Sapphire</option>
-                        <option value="Seagate">Seagate</option>
-                        <option value="SeaSonic">SeaSonic</option>
-                        <option value="Thermaltake">Thermaltake</option>
-                        <option value="Western Digital">Western Digital</option>
-                        <option value="XFX">XFX</option>
-                        <option value="Zotac">Zotac</option>
-                    </select> -->
-                    <asp:DropDownList ID="ddl_manufacturer" class="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddl_manufacturer" placeholder="Manufacturer" class="form-control" runat="server" AppendDataBoundItems="false">
+                        <asp:ListItem Text="Select Manufacturer" Value="" />
+                        <asp:ListItem>Acer</asp:ListItem>
+                        <asp:ListItem>AMD</asp:ListItem>
+                        <asp:ListItem>ARCTIC</asp:ListItem>
+                        <asp:ListItem>ASRock</asp:ListItem>
+                        <asp:ListItem>Asus</asp:ListItem>
+                        <asp:ListItem>be quiet!</asp:ListItem>
+                        <asp:ListItem>Cooler Master</asp:ListItem>
+                        <asp:ListItem>Corsair</asp:ListItem>
+                        <asp:ListItem>Crucial</asp:ListItem>
+                        <asp:ListItem>Deepcool</asp:ListItem>
+                        <asp:ListItem>EVGA</asp:ListItem>
+                        <asp:ListItem>Fractal Design</asp:ListItem>
+                        <asp:ListItem>G.Skill</asp:ListItem>
+                        <asp:ListItem>Intel</asp:ListItem>
+                        <asp:ListItem>Kingston</asp:ListItem>
+                        <asp:ListItem>KIOXIA</asp:ListItem>
+                        <asp:ListItem>Lian Li</asp:ListItem>
+                        <asp:ListItem>Noctua</asp:ListItem>
+                        <asp:ListItem>NOX</asp:ListItem>
+                        <asp:ListItem>MSI</asp:ListItem>
+                        <asp:ListItem>NVIDIA</asp:ListItem>
+                        <asp:ListItem>NZXT</asp:ListItem>
+                        <asp:ListItem>Samsung</asp:ListItem>
+                        <asp:ListItem>Sapphire</asp:ListItem>
+                        <asp:ListItem>Seagate</asp:ListItem>
+                        <asp:ListItem>SeaSonic</asp:ListItem>
+                        <asp:ListItem>Thermaltake</asp:ListItem>
+                        <asp:ListItem>Western Digital</asp:ListItem>
+                        <asp:ListItem>XFX</asp:ListItem>
+                        <asp:ListItem>Zotac</asp:ListItem>
+                    </asp:DropDownList>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Manufacturer is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Model </label>
-                    <!-- <input type="text" id="inputModel" placeholder="Model" class="form-control"> -->
                     <asp:TextBox ID="tb_model" placeholder="Model" class="form-control" runat="server"></asp:TextBox>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Model is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Color </label>
-                    <!-- <select name="Color" id="inputColor" class="form-control">
-                        <option value="None">None</option>
-                        <option value="Beige">Beige</option>
-                        <option value="Black">Black</option>
-                        <option value="Blue">Blue</option>
-                        <option value="Camo">Camo</option>
-                        <option value="Gold">Gold</option>
-                        <option value="Grey">Grey</option>
-                        <option value="Green">Green</option>
-                        <option value="Orange">Orange</option>
-                        <option value="Purple">Purple</option>
-                        <option value="Red">Red</option>
-                        <option value="Silver">Silver</option>
-                        <option value="Yellow">Yellow</option>
-                        <option value="White">White</option>
-                    </select> -->
-                    <asp:DropDownList ID="ddl_color" class="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddl_color" placeholder="Color" class="form-control" runat="server" AppendDataBoundItems="false">
+                        <asp:ListItem Text="None" Value="" />
+                        <asp:ListItem>Beige</asp:ListItem>
+                        <asp:ListItem>Black</asp:ListItem>
+                        <asp:ListItem>Blue</asp:ListItem>
+                        <asp:ListItem>Camo</asp:ListItem>
+                        <asp:ListItem>Gold</asp:ListItem>
+                        <asp:ListItem>Grey</asp:ListItem>
+                        <asp:ListItem>Green</asp:ListItem>
+                        <asp:ListItem>Orange</asp:ListItem>
+                        <asp:ListItem>Purple</asp:ListItem>
+                        <asp:ListItem>Red</asp:ListItem>
+                        <asp:ListItem>Silver</asp:ListItem>
+                        <asp:ListItem>Yellow</asp:ListItem>
+                        <asp:ListItem>White</asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                    </asp:DropDownList>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Color is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Photo</label>
-                    <!-- <input type="url" id="inputPhoto" placeholder="URL" class="form-control"> -->
-                    <asp:TextBox ID="tb_photo" placeholder="URL" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tb_photoProduct" placeholder="Photo" class="form-control" runat="server"></asp:TextBox>
+                    <!-- URL or Upload -->
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">Stock</label>
-                    <!-- <input type="number" placeholder="Number" step="1" min="0" id="inputStock" value="0"
-                        class="form-control"> -->
-                    <asp:TextBox ID="tb_stock" placeholder="Number" class="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                    <asp:TextBox ID="tb_stock" placeholder="Stock" class="form-control" runat="server" TextMode="Number"></asp:TextBox>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Stock is required"></asp:RequiredFieldValidator>--%>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
-                    <label class="form-label text-light">Details</label>
-                    <!-- <input type="url" id="inputDetails" placeholder="URL" class="form-control"> -->
-                    <asp:TextBox ID="tb_details" placeholder="URL" class="form-control" runat="server"></asp:TextBox>
+                    <label class="form-label text-light">Description</label>
+                    <asp:TextBox ID="tb_desc" placeholder="Description" class="form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
             <div class="col-xs col-sm col-md">
                 <div class="form-outline">
                     <label class="form-label text-light">&nbsp;</label>
                     <br>
-                    <!-- <button type="button" onclick="clickAddComponent()" class="btn btn-primary" id="submit">
-                        <i class="fa-solid fa-circle-plus"></i>
-                    </button> -->
-                    <asp:Button ID="btn_submit" runat="server" class="btn btn-primary" Text="SUBMIT"></asp:Button>
-                    <i class="fa-solid fa-circle-plus"></i>
+                    <asp:Button ID="btn_submit" runat="server" class="btn btn-primary" Text="Submit"></asp:Button>
+                    <!-- <i class="fa-solid fa-circle-plus"></i> -->
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -158,11 +153,32 @@
                     <th scope="col">Color</th>
                     <th scope="col">Photo</th>
                     <th scope="col">Stock</th>
-                    <th scope="col">Details</th>
+                    <th scope="col">Desc</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody id="tb"></tbody>
+            <tbody id="tb">
+                <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" OnItemDataBound="Repeater1_ItemCreated" OnItemCreated="Repeater1_ItemCreated">
+                    <ItemTemplate>
+                        <tr>
+                            <td><button type="button" class="btn btn-secondary btn-sm" onclick="clickEditComponent(${component.id})"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            <td><asp:Label ID="lbl_serial" runat="server"></asp:Label></td>
+                            <td><asp:Label ID="lbl_price" runat="server"></asp:Label> €</td>
+                            <td><asp:Label ID="lbl_category" runat="server"></asp:Label></td>
+                            <td><asp:Label ID="lbl_manufacturer" runat="server"></asp:Label></td>
+                            <td><asp:Label ID="lbl_model" runat="server"></asp:Label></td>
+                            <td><asp:Label ID="lbl_color" runat="server"></asp:Label></td>
+                            <td><asp:Label ID="lbl_photo" runat="server"></asp:Label></td> <!-- Conseguir colocar o url da imagem num img src -->
+                            <td><asp:Label ID="lbl_stock" runat="server"></asp:Label></td>
+                            <td><asp:Label ID="lbl_description" runat="server"></asp:Label></td> <!-- Guardar a info daqui num modal ou botão -->
+                            <td><button type="button" class="btn btn-danger btn-sm" onclick="clickDeleteComponent(${component.id})"><i class="fa-solid fa-trash"></i></button></td>
+                        </tr>
+                    </ItemTemplate>
+                </asp:Repeater>
+
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineShopConnectionString %>"
+                    SelectCommand="SELECT [serial], [price], [category], [manufacturer], [model], [color], [photo], [stock], [description] FROM [Products]"></asp:SqlDataSource>
+            </tbody>
         </table>
     </div>
 </asp:Content>

@@ -88,6 +88,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item" hidden>
+                                    <a class="nav-link" href="logout.aspx">
+                                        <i class="fa-solid fa-user"></i>
+                                        <asp:Label ID="lbl_logout" class="navLink" runat="server" Text="Logout"></asp:Label>
+                                    </a>
+                                </li>
+                                <li class="nav-item" hidden>
                                     <a class="nav-link" href="users.aspx">
                                         <i class="fa-solid fa-user"></i>
                                         <asp:Label ID="lbl_users" class="navLink" runat="server" Text="Users"></asp:Label>
@@ -100,9 +106,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item" hidden>
-                                    <a class="nav-link" href="deliveries.aspx">
+                                    <a class="nav-link" href="orders.aspx">
                                         <i class="fa-solid fa-user"></i>
-                                        <asp:Label ID="lbl_deliveries" class="navLink" runat="server" Text="Deliveries"></asp:Label>
+                                        <asp:Label ID="lbl_orders" class="navLink" runat="server" Text="Orders"></asp:Label>
                                     </a>
                                 </li>
                             </ul>

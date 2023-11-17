@@ -11,88 +11,61 @@ namespace OnlineShop
 {
 
 
-    public partial class users
+    public partial class orders
     {
 
         /// <summary>
-        /// tb_name control.
+        /// tb_orderID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_name;
+        protected global::System.Web.UI.WebControls.TextBox tb_orderID;
 
         /// <summary>
-        /// tb_email control.
+        /// tb_clientName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_email;
+        protected global::System.Web.UI.WebControls.TextBox tb_clientName;
 
         /// <summary>
-        /// tb_address control.
+        /// ddl_productName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_address;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_productName;
 
         /// <summary>
-        /// tb_city control.
+        /// tb_amount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_city;
+        protected global::System.Web.UI.WebControls.TextBox tb_amount;
 
         /// <summary>
-        /// tb_zipCode control.
+        /// tb_date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_zipCode;
+        protected global::System.Web.UI.WebControls.TextBox tb_date;
 
         /// <summary>
-        /// tb_phone control.
+        /// ddl_status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_phone;
-
-        /// <summary>
-        /// btn_submit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_submit;
-
-        /// <summary>
-        /// Repeater1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
-
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_status;
     }
 }

@@ -26,7 +26,7 @@ namespace OnlineShop
             SqlConnection myConn = new SqlConnection(ConfigurationManager.ConnectionStrings["OnlineShopConnectionString"].ConnectionString);
             SqlCommand sqlCommand = new SqlCommand();
 
-            sqlCommand.Parameters.AddWithValue("@newPW", EncryptString(newPW.Text));
+            sqlCommand.Parameters.AddWithValue("@newPassword", EncryptString(newPassword.Text));
             sqlCommand.Parameters.AddWithValue("@email", DecryptString(accountEmail));
 
             sqlCommand.CommandType = CommandType.StoredProcedure;

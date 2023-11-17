@@ -23,14 +23,14 @@ namespace OnlineShop
 
         protected void resetAll_Click(object sender, EventArgs e)
         {
+            name.Text = "";
             email.Text = "";
             password.Text = "";
             confirmPW.Text = "";
-            firstName.Text = "";
-            lastName.Text = "";
             address.Text = "";
-            postalCode.Text = "";
-            region.Text = "";
+            city.Text = "";
+            zipcode.Text = "";
+            nif.Text = "";
         }
 
         protected void registerUser_Click(object sender, EventArgs e)
@@ -38,13 +38,13 @@ namespace OnlineShop
             SqlConnection myConn = new SqlConnection(ConfigurationManager.ConnectionStrings["OnlineShopConnectionString"].ConnectionString);
             SqlCommand sqlCommand = new SqlCommand();
 
+            sqlCommand.Parameters.AddWithValue("@name", name.Text);
             sqlCommand.Parameters.AddWithValue("@email", email.Text);
             sqlCommand.Parameters.AddWithValue("@password", EncryptString(password.Text));
-            sqlCommand.Parameters.AddWithValue("@firstName", firstName.Text);
-            sqlCommand.Parameters.AddWithValue("@lastName", lastName.Text);
             sqlCommand.Parameters.AddWithValue("@address", address.Text);
-            sqlCommand.Parameters.AddWithValue("@postalCode", postalCode.Text);
-            sqlCommand.Parameters.AddWithValue("@region", region.Text);
+            sqlCommand.Parameters.AddWithValue("@city", city.Text);
+            sqlCommand.Parameters.AddWithValue("@zipcode", zipcode.Text);
+            sqlCommand.Parameters.AddWithValue("@nif", nif.Text);
 
             SqlParameter value = new SqlParameter();
             value.ParameterName = "@return";
@@ -144,14 +144,14 @@ namespace OnlineShop
 
         protected void clearFields()
         {
+            name.Text = "";
             email.Text = "";
             password.Text = "";
             confirmPW.Text = "";
-            firstName.Text = "";
-            lastName.Text = "";
             address.Text = "";
-            postalCode.Text = "";
-            region.Text = "";
+            city.Text = "";
+            zipcode.Text = "";
+            nif.Text = "";
         }
 
         protected void loginPage_Click(object sender, EventArgs e)

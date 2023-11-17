@@ -24,13 +24,13 @@ namespace OnlineShop
         protected global::System.Web.UI.WebControls.Label lbl_message;
 
         /// <summary>
-        /// newPW control.
+        /// newPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox newPW;
+        protected global::System.Web.UI.WebControls.TextBox newPassword;
 
         /// <summary>
         /// CompareValidator1 control.
