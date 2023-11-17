@@ -15,8 +15,10 @@ namespace OnlineShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["logged"] != null)
-                Response.Redirect("index.aspx");
+            if (Session["logged"] != null) {
+                if (Session["accountType"].Equals(0)) Response.Redirect("index.aspx");
+                if (Session["accountType"].Equals(1)) Response.Redirect("users.aspx");
+            }
         }
 
         protected void login_Click(object sender, EventArgs e)
@@ -56,7 +58,9 @@ namespace OnlineShop
                 Session["logged"] = true;
                 Session["email"] = email.Text;
                 Session["accountType"] = accTypeOutput;
-                Response.Redirect("index.aspx");
+
+                if (Session["accountType"].Equals(0)) Response.Redirect("index.aspx");
+                if (Session["accountType"].Equals(1)) Response.Redirect("users.aspx");
             }
             else if(output == 2)
             {

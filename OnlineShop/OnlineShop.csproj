@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="accountActivation.aspx" />
-    <Content Include="admin.aspx" />
+    <Content Include="users.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="css\about.css" />
     <Content Include="css\admin.css" />
@@ -100,7 +100,6 @@
     <Content Include="products.aspx" />
     <Content Include="Recover-Password.aspx" />
     <Content Include="Register.aspx" />
-    <Content Include="users.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,12 +117,12 @@
     <Compile Include="accountActivation.aspx.designer.cs">
       <DependentUpon>accountActivation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin.aspx.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin.aspx.designer.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -202,13 +201,6 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="users.aspx.cs">
-      <DependentUpon>users.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="users.aspx.designer.cs">
-      <DependentUpon>users.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -8,60 +8,78 @@
     <div id="inputs" class="container-fluid">
         <div class="row g-2" style="margin-left: 4%; margin-top: 4%">
             <h1 class="text-light d-flex justify-content-center mb-5">Manage Orders</h1>
-            <div class="col-xs col-sm col-md">
-                <div class="form-outline">
-                    <label class="form-label text-light">OrderID</label>
-                    <asp:TextBox ID="tb_orderID" placeholder="OrderID" class="form-control" runat="server" TextMode="Number"></asp:TextBox>
-                </div>
-            </div>
-            <div class="col-xs col-sm col-md">
-                <div class="form-outline">
-                    <label class="form-label text-light">ClientName</label>
-                    <asp:TextBox ID="tb_clientName" placeholder="ClientName" class="form-control" runat="server"></asp:TextBox>
-                </div>
-            </div>
-            <div class="col-xs col-sm col-md">
-                <div class="form-outline">
-                    <label class="form-label text-light">ProductName</label>
-                    <asp:DropDownList ID="ddl_productName" class="form-control" runat="server"></asp:DropDownList>
-                </div>
-            </div>
-            <div class="col-xs col-sm col-md">
-                <div class="form-outline">
-                    <label class="form-label text-light">Amount</label>
-                    <asp:TextBox ID="tb_amount" placeholder="Amount" class="form-control" runat="server" TextMode="Number"></asp:TextBox>
-                </div>
-            </div>
-            <div class="col-xs col-sm col-md">
-                <div class="form-outline">
-                    <label class="form-label text-light">Date</label>
-                    <asp:TextBox ID="tb_date" placeholder="Date" class="form-control" runat="server"></asp:TextBox>
-                </div>
-            </div>
-            <div class="col-xs col-sm col-md">
-                <div class="form-outline">
-                    <label class="form-label text-light">Status</label>
-                    <asp:DropDownList ID="ddl_status" class="form-control" runat="server"></asp:DropDownList>
-                </div>
-            </div>
         </div>
-    </div>
-
-    <div class="container-fluid">
-        <table class="componentTable">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">OrderID</th>
-                    <th scope="col">ClientName</th>
-                    <th scope="col">ProductName</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Status</th>
-                    <th scope="col"></th>
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" OnItemDataBound="Repeater1_ItemDataBound" OnItemCommand="Repeater1_ItemCommand">
+            <HeaderTemplate>
+            <table id="users" border="1" width="1500" bgcolor="white">
+                <tr style="background-color: white">
+                    <td><b>ID</b></td>
+                    <td><b>Client Name</b></td>
+                    <td><b>Product Name</b></td>
+                    <td><b>Amoun</b></td>
+                    <td><b>Date</b></td>
+                    <td><b>Zip Code</b></td>
+                    <td>
+                        <asp:ImageButton ID="btn_saveAll" runat="server" ImageUrl="~/images/saveAll.jpg" OnClick="btn_saveAll_Click" />
+                    </td>
                 </tr>
-            </thead>
-            <tbody id="tb"></tbody>
-        </table>
+        </HeaderTemplate>
+        <ItemTemplate>
+            <tr>
+                <td>
+                    <asp:Label ID="lbl_id" runat="server" Text="Label"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_clientName" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_productName" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_amount" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_date" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_zipcode" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:ImageButton ID="btn_save" runat="server" ImageUrl="~/images/save.png" CommandName="btn_save" />
+                    <asp:ImageButton ID="btn_delete" runat="server" ImageUrl="~/images/delete.jpg" CommandName="btn_delete" />
+                </td>
+            </tr>
+        </ItemTemplate>
+        <AlternatingItemTemplate>
+            <tr>
+                <td>
+                    <asp:Label ID="lbl_id" runat="server" Text="Label"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_clientName" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_productName" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_amount" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_date" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_zipcode" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:ImageButton ID="btn_save" runat="server" ImageUrl="~/images/save.png" CommandName="btn_save" />
+                    <asp:ImageButton ID="btn_delete" runat="server" ImageUrl="~/images/delete.jpg" CommandName="btn_delete" />
+                </td>
+            </tr>
+        </AlternatingItemTemplate>
+        <FooterTemplate>
+            </table>
+        </FooterTemplate>
+        </asp:Repeater>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineShopConnectionString %>" SelectCommand="SELECT * FROM [Orders]"></asp:SqlDataSource>
     </div>
 </asp:Content>

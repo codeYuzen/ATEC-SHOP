@@ -133,45 +133,4 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <table class="componentTable">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Serial</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Manufacturer</th>
-                    <th scope="col">Model</th>
-                    <th scope="col">Color</th>
-                    <th scope="col">Photo</th>
-                    <th scope="col">Stock</th>
-                    <th scope="col">Desc</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody id="tb">
-                <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" OnItemDataBound="Repeater1_ItemCreated" OnItemCreated="Repeater1_ItemCreated">
-                    <ItemTemplate>
-                        <tr>
-                            <td><button type="button" class="btn btn-secondary btn-sm" onclick="clickEditComponent(${component.id})"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            <td><asp:Label ID="lbl_serial" runat="server"></asp:Label></td>
-                            <td><asp:Label ID="lbl_price" runat="server"></asp:Label> €</td>
-                            <td><asp:Label ID="lbl_category" runat="server"></asp:Label></td>
-                            <td><asp:Label ID="lbl_manufacturer" runat="server"></asp:Label></td>
-                            <td><asp:Label ID="lbl_model" runat="server"></asp:Label></td>
-                            <td><asp:Label ID="lbl_color" runat="server"></asp:Label></td>
-                            <td><asp:Label ID="lbl_photo" runat="server"></asp:Label></td> <!-- Conseguir colocar o url da imagem num img src -->
-                            <td><asp:Label ID="lbl_stock" runat="server"></asp:Label></td>
-                            <td><asp:Label ID="lbl_description" runat="server"></asp:Label></td> <!-- Guardar a info daqui num modal ou botão -->
-                            <td><button type="button" class="btn btn-danger btn-sm" onclick="clickDeleteComponent(${component.id})"><i class="fa-solid fa-trash"></i></button></td>
-                        </tr>
-                    </ItemTemplate>
-                </asp:Repeater>
-
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineShopConnectionString %>"
-                    SelectCommand="SELECT [serial], [price], [category], [manufacturer], [model], [color], [photo], [stock], [description] FROM [Products]"></asp:SqlDataSource>
-            </tbody>
-        </table>
-    </div>
-</asp:Content>
+    </asp:Content>

@@ -18,7 +18,10 @@ namespace OnlineShop
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["logged"] != null)
-                Response.Redirect("index.aspx");
+            {
+                if (Session["accountType"].Equals(0)) Response.Redirect("index.aspx");
+                if (Session["accountType"].Equals(1)) Response.Redirect("users.aspx");
+            }
         }
 
         protected void resetAll_Click(object sender, EventArgs e)
